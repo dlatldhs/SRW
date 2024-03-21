@@ -44,10 +44,10 @@ function Header() {
     <StyledHeader>
       <Logo>로고 들어갈 자리</Logo>
       <Navigation>
-        <a href="#1">회사소개</a>
-        <a href="#2">사업소개</a>
-        <a href="#3">기술소개</a>
-        <a href="#4">고객센터</a>
+        <a href="company">회사소개</a>
+        <a href="business">사업소개</a>
+        <a href="skills">기술소개</a>
+        <a href="contacts">고객센터</a>
       </Navigation>
     </StyledHeader>
   );

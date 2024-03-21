@@ -6,10 +6,11 @@ const MainPage = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh%;
+    height: 75vh;
     max-width: 100vw;
     max-height:100vh;
     background-color: #f0f0f0;
+    position: relative;
 `
 
 const Main = () => {
