@@ -1,0 +1,100 @@
+import React from 'react';
+import styled from 'styled-components';
+import Header from './Header';
+import Footer from './Footer';
+import YouTube from 'react-youtube';
+
+const SkillsBackground = styled.div`
+    background-color: pink;
+
+    height: 100%;
+    max-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+`
+
+const SkillsPage = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
+    max-width: 100vw;
+    max-height:100vh;
+    background-color: #f0f0f0;
+    position: relative;
+    flex-direction: column;
+`
+
+const SkillsExplain = styled.div`
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 80%;
+    height: 100%;
+`
+
+const Picture = styled.div`
+    width: 100%;
+    height:100%;
+    max-width: 300px; 
+    max-height:400px; 
+    background-color: #5AD2FF;
+    margin: 10px 10px;
+
+    &:first-child {
+        margin-left: 0; 
+    }
+
+    &:last-child {
+        margin-right: 0; 
+    }
+`
+
+const Title = styled.h1`
+    margin: 0 0 0 0;
+    background-color: #00FA9A;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+`
+
+const video = 'https://www.youtube.com/watch?v='
+
+const opts = {
+    playerVars: { controls: 0, rel: 0, showinfo: 0 }
+  };
+
+const Skills = () => {
+    return (
+        <SkillsBackground>
+            <Header />
+            <SkillsPage>
+            <Title>기술 소개</Title>
+                <SkillsExplain>
+                    <Picture></Picture>
+                    <Picture></Picture>
+                    <Picture></Picture>
+                    <Picture></Picture>
+                </SkillsExplain>
+                <YouTube
+                    videoId="1RFiFjG7Eh4" // defaults -> ''
+                    id="1RFiFjG7Eh4" // defaults -> ''
+                    onPlay={() => {
+                    console.log("test");
+                    // setMute(0);
+                    }}
+                    // opts={opts}
+                    onReady={(event) => {
+                    console.log(event);
+                    event.target.pauseVideo();
+                    }}
+                />
+            </SkillsPage>
+            <Footer />
+        </SkillsBackground>
+    )
+}
+
+export default Skills;

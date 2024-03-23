@@ -6,7 +6,8 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  height: 10vh;
+  position: relative;
 `;
 
 const Logo = styled.div`
@@ -15,9 +16,14 @@ const Logo = styled.div`
   max-height: 50px;
   height: 50px;
   background-color: red;
+  left: 120px;
+  position: absolute;
 `;
 
 const Navigation = styled.nav`
+  position: absolute;
+  right: 50px;
+
   a {
     text-decoration: none;
     color: black;

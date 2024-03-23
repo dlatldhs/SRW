@@ -1,63 +1,23 @@
-// import React from 'react';
-// import styled from 'styled-components';
-
-// const BusinessPage = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%;
-//     height: 75vh;
-//     max-width: 100vw;
-//     max-height:100vh;
-//     background-color: #f0f0f0;
-//     position: relative;
-// `
-
-// const BusinessExplain = styled.div`
-
-// `
-
-// const Picture = styled.div`
-//     position: absolute;
-//     width: 100%;
-//     height:100%;
-//     max-width: 300px;
-//     max-height:400px;
-
-//     background-color: #5AD2FF;
-
-
-// `
-
-// const Business = () => {
-//     return <BusinessPage>
-//         <BusinessExplain>
-//             <Picture>
-//             </Picture>
-            
-//             <Picture>
-//             </Picture>
-            
-//             <Picture>
-//             </Picture>
-            
-//             <Picture>
-//             </Picture>
-
-//         </BusinessExplain>
-//     </BusinessPage>
-// };
-
-// export default Business;
 import React from 'react';
 import styled from 'styled-components';
+import Footer from './Footer';
+import Header from './Header';
+
+const BusinessBackground = styled.div`
+    background-color: pink;
+
+    height: 100%;
+    max-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+`
 
 const BusinessPage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 75vh;
+    height: 80vh;
     max-width: 100vw;
     max-height:100vh;
     background-color: #f0f0f0;
@@ -93,16 +53,18 @@ const Picture = styled.div`
 const Title = styled.h1`
     margin: 0 0 0 0;
     background-color: #00FA9A;
-    justify-content: center;
-    align-items: center;
     text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
 `
 
 const Business = () => {
     return (
-        <div>
-            <Title>사업 소개</Title>
+        <BusinessBackground>
+            <Header />
             <BusinessPage>
+            <Title>사업 소개</Title>
                 <BusinessExplain>
                     <Picture></Picture>
                     <Picture></Picture>
@@ -110,7 +72,8 @@ const Business = () => {
                     <Picture></Picture>
                 </BusinessExplain>
             </BusinessPage>
-        </div>
+            <Footer />
+        </BusinessBackground>
     );
 };
 
