@@ -6,6 +6,7 @@ const Slider = styled.section`
     width: 100%;
     height: 500px; /* 원하는 높이 조절 */
     overflow: hidden;
+    top: 136px;
 `;
 
 const Slide = styled.div`
@@ -26,6 +27,32 @@ const Image = styled.img`
     object-fit: cover;
 `
 
+const Button = styled.button`
+    all: unset; /* 기본 버튼 스타일 제거 */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+
+    &:hover {
+        background-color: rgba(0,0,0,0.8);
+    }
+`;
+
+const PrevButton = styled(Button)`
+    left: 10px;
+`;
+
+const NextButton = styled(Button)`
+    right: 10px;
+`;
+
+
 const ImageSlider = ({images}) => {
 
     const [ current, setCurrent ] = useState(0);
@@ -37,6 +64,14 @@ const ImageSlider = ({images}) => {
         );
     }
 
+    const prevSlide = () => {
+        setCurrent(current === 0 ? length - 1 : current - 1);
+    };
+
+    const nextSlide = () => {
+        setCurrent(current === length - 1 ? 0 : current + 1);
+    };
+
     useEffect(() => {
         const interval = setInterval(nextSlider, 5000);
         return () => clearInterval(interval);
@@ -44,6 +79,8 @@ const ImageSlider = ({images}) => {
 
     return (
         <Slider>
+            <PrevButton onClick={prevSlide}>&#10094;</PrevButton>
+            <NextButton onClick={nextSlide}>&#10095;</NextButton>
             {images.map( (image, idx ) => (
                 <Slide className={idx===current ? 'active' : ''} key={idx}>
                     {idx === current && <Image src={image} alt='picture' />}
