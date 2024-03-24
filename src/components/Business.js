@@ -37,9 +37,10 @@ const Picture = styled.div`
     width: 100%;
     height:100%;
     max-width: 300px; 
-    max-height:400px; 
+    max-height:435px; 
     background-color: #5AD2FF;
     margin: 10px 10px;
+    position: relative;
 
     &:first-child {
         margin-left: 0; 
@@ -58,6 +59,16 @@ const Title = styled.h1`
     top: 0;
     width: 100%;
 `
+const PictureExplane = styled.div`
+    text-align: center;
+    background-color: yellow;
+    max-height: 35px;
+    height: 100%;
+    font-size: 30px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+`
 
 const Business = () => {
     return (
@@ -66,10 +77,30 @@ const Business = () => {
             <BusinessPage>
             <Title>사업 소개</Title>
                 <BusinessExplain>
-                    <Picture></Picture>
-                    <Picture></Picture>
-                    <Picture></Picture>
-                    <Picture></Picture>
+
+                    <Picture>
+                        <PictureExplane>
+                            로봇용접 공정개발
+                        </PictureExplane>
+                    </Picture>
+
+                    <Picture>
+                        <PictureExplane>
+                            로봇용접 공정개발
+                        </PictureExplane>
+                    </Picture>
+
+                    <Picture>
+                        <PictureExplane>
+                            로봇용접 공정개발
+                        </PictureExplane>
+                    </Picture>
+
+                    <Picture>
+                        <PictureExplane>
+                            로봇용접 공정개발
+                        </PictureExplane>
+                    </Picture>
                 </BusinessExplain>
             </BusinessPage>
             <Footer />

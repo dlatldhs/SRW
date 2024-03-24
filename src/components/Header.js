@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 // 스타일이 적용된 컴포넌트들
 const StyledHeader = styled.header`
@@ -18,6 +19,7 @@ const Logo = styled.div`
   background-color: red;
   left: 120px;
   position: absolute;
+  cursor: pointer;
 `;
 
 const Navigation = styled.nav`
@@ -45,10 +47,17 @@ const Navigation = styled.nav`
   }
 `;
 
-function Header() {
+const Header = () => {
+
+  const navigate = useNavigate();
+
+  const handleClickLogo = () => {
+    navigate('/')
+  }
+
   return (
     <StyledHeader>
-      <Logo>로고 들어갈 자리</Logo>
+      <Logo onClick={handleClickLogo}>로고 들어갈 자리</Logo>
       <Navigation>
         <a href="company">회사소개</a>
         <a href="business">사업소개</a>
