@@ -28,13 +28,15 @@ const CompanyGallery = styled.div`
     height: 100%;
     background-color: orange;
     display: flex;
+    position: relative;
 `
 
 const Explanation = styled.div`
     flex: 1;
     height: 100%;
     background-color: #9ce644;
-    display: flex;
+    // display: flex;
+    display: grid;
 `
 
 const images = [
@@ -43,6 +45,24 @@ const images = [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySIc71GB-Dk3YTaA8_jTN6s06e7BdOpLcXTUfNuHAPVsh-cy05jJrlpijh3PVbzwFGbA&usqp=CAU',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz8Pfv78F2D4Y-CI8SfcOnSd5g44ucmFBZK3L5ioBkLxwKtD735pojKEZcV_IB53uuvXA&usqp=CAU',
 ];
+
+const CompanyExplaneBox = styled.div`
+`;
+
+const CEOBox = styled.div`
+`;
+
+const GreetingBox = styled.div`
+`;
+
+const VisionBox = styled.div`
+`;
+
+const HistoryBox = styled.div`
+`;
+
+const CooperativeBox = styled.div`
+`;
 
 const Company = () => {
     return (
@@ -53,7 +73,31 @@ const Company = () => {
                     <ImageSlider images={images} />
                 </CompanyGallery>
                 <Explanation>
-                    회사 소개, 대표이사 사진, 인사말, 목표비전, 연혁, 인증서등
+
+                    <CompanyExplaneBox>
+
+                    </CompanyExplaneBox>
+
+                    <CEOBox>
+
+                    </CEOBox>
+
+                    <GreetingBox>
+
+                    </GreetingBox>
+
+                    <VisionBox>
+
+                    </VisionBox>
+
+                    <HistoryBox>
+
+                    </HistoryBox>
+
+                    <CooperativeBox>
+
+                    </CooperativeBox>
+
                 </Explanation>
             </CompanyPage>
             <Footer />

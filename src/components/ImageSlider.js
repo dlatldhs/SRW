@@ -4,9 +4,10 @@ import styled from "styled-components";
 const Slider = styled.section`
     position: relative;
     width: 100%;
-    height: 500px; /* 원하는 높이 조절 */
+    // height: 500px;
     overflow: hidden;
-    top: 136px;
+    // top: 136px;
+    height: 100%;
 `;
 
 const Slide = styled.div`

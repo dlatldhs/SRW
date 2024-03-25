@@ -25,20 +25,30 @@ const Logo = styled.div`
 const Navigation = styled.nav`
   position: absolute;
   right: 50px;
+  max-width: 600px;
+  max-height: 50px;
 
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  
   a {
     text-decoration: none;
     color: black;
     outline: none;
-    
-    padding: 15px 25px 15px 25px;
 
     width: 100%;
     height: 100%;
 
     max-width: 150px;
-    max-height: 120px;
+    max-height: 50px;
     
+    display: block;
+
+    text-align: center;
+    align-content: center;
 
     &:hover {
       background-color: gray;

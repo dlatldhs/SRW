@@ -72,19 +72,28 @@ const Title = styled.h1`
 const YoutubeBox = {
     position: 'absolute',
     bottom: '50px',
-    // maxHeight: '1440px',
-    // maxWidth: '810px',
-    // width: '100%',
-    // height: '100%',
+    width: '100%',
+    height: '100%',
 }
 
-const video = 'https://www.youtube.com/watch?v='
+const ResponsiveYoutubeContainer = styled.div`
+  position: absolute;
+  bottom: 50px;
+  width: 80vw; // 뷰포트 너비의 80%
+  height: 0; // 높이를 0으로 설정하고 패딩을 통해 비율 조절
+  padding-bottom: 45%; // 16:9 비율 유지를 위해 너비 대비 45%의 패딩
+  overflow: hidden;
 
-const opts = {
-    height: '810',
-    width: '1440',
-    playerVars: { controls: 0, rel: 0, showinfo: 0 }
-  };
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+const video = 'https://www.youtube.com/watch?v='
 
 const Skills = () => {
     return (
@@ -119,19 +128,21 @@ const Skills = () => {
                     </Picture>
 
                 </SkillsExplain>
-                <YouTube style={YoutubeBox}
-                    videoId="1RFiFjG7Eh4" // defaults -> ''
-                    id="1RFiFjG7Eh4" // defaults -> ''
-                    onPlay={() => {
-                    console.log("test");
-                    // setMute(0);
-                    }}
-                    opts={opts}
-                    onReady={(event) => {
-                    console.log(event);
-                    event.target.pauseVideo();
-                    }}
-                />
+                <ResponsiveYoutubeContainer>
+                    <YouTube style={YoutubeBox}
+                        videoId="1RFiFjG7Eh4"
+                        id="1RFiFjG7Eh4"
+                        opts={{
+                            playerVars: { controls: 0, rel: 0, showinfo: 0},
+                            height: '100%',
+                            width: '100%',
+                        }}
+                        onReady={(event) => {
+                            console.log(event);
+                            event.target.pauseVideo();
+                        }}
+                    />
+                </ResponsiveYoutubeContainer>
             </SkillsPage>
             <Footer />
         </SkillsBackground>
