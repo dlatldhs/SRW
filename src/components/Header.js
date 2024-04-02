@@ -72,7 +72,7 @@ const Header = () => {
         <a href="company">회사소개</a>
         <a href="business">사업소개</a>
         <a href="skills">기술소개</a>
-        <a href="contacts">고객센터</a>
+        <a href="contacts">Contacts</a>
       </Navigation>
     </StyledHeader>
   );
