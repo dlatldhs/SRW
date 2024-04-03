@@ -17,7 +17,7 @@ const SkillsPage = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 180vh;
+    height: 170vh;
     max-width: 100vw;
     max-height:200vh;
     background-color: #f0f0f0;
@@ -69,20 +69,14 @@ const Title = styled.h1`
     width: 100%;
     position: absolute;
 `
-const YoutubeBox = {
-    position: 'absolute',
-    bottom: '50px',
-    width: '100%',
-    height: '100%',
-}
 
 const ResponsiveYoutubeContainer = styled.div`
   position: absolute;
   bottom: 50px;
-  width: 80vw; // 뷰포트 너비의 80%
-  height: 0; // 높이를 0으로 설정하고 패딩을 통해 비율 조절
-  padding-bottom: 45%; // 16:9 비율 유지를 위해 너비 대비 45%의 패딩
+  width: 90vw; // 뷰포트 너비의 80%
+  padding-top: 45vh; // 높이를 너비의 비율에 맞춰 조정
   overflow: hidden;
+  height: 50vh;
 
   iframe {
     position: absolute;
@@ -129,13 +123,11 @@ const Skills = () => {
 
                 </SkillsExplain>
                 <ResponsiveYoutubeContainer>
-                    <YouTube style={YoutubeBox}
+                    <YouTube
                         videoId="1RFiFjG7Eh4"
                         id="1RFiFjG7Eh4"
                         opts={{
-                            playerVars: { controls: 0, rel: 0, showinfo: 0},
-                            height: '100%',
-                            width: '100%',
+                            playerVars: { controls: 1, rel: 0, showinfo: 0}, // 컨트롤 보이도록 설정
                         }}
                         onReady={(event) => {
                             console.log(event);

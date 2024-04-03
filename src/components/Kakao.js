@@ -17,8 +17,8 @@ const Kakao = () => {
     // Lat: 35.1605 Lon: 128.8641
     return (
         <div id="map" style={{
-            width: '500px',
-            height:'500px'
+            width: '600px',
+            height:'400px'
         }}></div>
     )
 };
