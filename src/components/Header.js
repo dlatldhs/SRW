@@ -9,6 +9,7 @@ const StyledHeader = styled.header`
   align-items: center;
   height: 10vh;
   position: relative;
+  background-color: #ffffff;
 `;
 
 const Logo = styled.div`
@@ -49,6 +50,8 @@ const Navigation = styled.nav`
 
     text-align: center;
     align-content: center;
+
+    font-size: 17px;
 
     &:hover {
       background-color: gray;

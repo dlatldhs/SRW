@@ -79,7 +79,7 @@ const Info = styled.div`
 `;
 
 const PictureInfo = styled.div`
-    max-height: 344px;
+    max-height: 331px;
     max-width: 600px;
     height: 100%;
     width: 100%;
