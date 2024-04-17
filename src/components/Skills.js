@@ -17,7 +17,7 @@ const SkillsPage = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 170vh;
+    height: 200vh;
     max-width: 100vw;
     max-height:200vh;
     background-color: #f0f0f0;

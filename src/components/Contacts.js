@@ -29,7 +29,7 @@ const CustomerConnect = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80vh;
+    height: 130vh;
     max-width: 100vw;
     max-height:100vh;
     background-color: blue;
