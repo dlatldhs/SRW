@@ -5,7 +5,6 @@ import Footer from './Footer';
 import ImageSlider from './ImageSlider';
 
 const CompanyBackground = styled.div`
-    background-color: pink;
     height: 100%;
     max-height: 100vh;
     width: 100%;
@@ -20,13 +19,11 @@ const CompanyPage = styled.div`
     height: 120vh;
     max-width: 100vw;
     max-height:100vh;
-    background-color: #f0f0f0;
 `
 
 const CompanyGallery = styled.div`
     flex: 1;
     height: 100%;
-    background-color: orange;
     display: flex;
     position: relative;
 `
@@ -34,23 +31,21 @@ const CompanyGallery = styled.div`
 const Explanation = styled.div`
     flex: 1;
     height: 100%;
-    background-color: #9ce644;
     display: grid;
     gap: 20px; // 요소들 사이의 간격을 20px로 설정
 `;
 
-
 const images = [
-    'https://us.123rf.com/450wm/nuevoimg/nuevoimg2308/nuevoimg230819575/211219943-%ED%8C%8C%EB%9E%80%EC%83%89-%EB%B0%B0%EA%B2%BD%EC%97%90-%ED%8C%8C%EB%9E%80-%EB%88%88%EC%9D%84-%EA%B0%80%EC%A7%84-%ED%9D%B0-%EA%B3%A0%EC%96%91%EC%9D%B4%EC%9D%98-%EC%B4%88%EC%83%81%ED%99%94.jpg?ver=6',
-    'https://m1.daumcdn.net/cfile202/image/2455914A56ADB1E315672A',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTySIc71GB-Dk3YTaA8_jTN6s06e7BdOpLcXTUfNuHAPVsh-cy05jJrlpijh3PVbzwFGbA&usqp=CAU',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz8Pfv78F2D4Y-CI8SfcOnSd5g44ucmFBZK3L5ioBkLxwKtD735pojKEZcV_IB53uuvXA&usqp=CAU',
+    '/img/image_11.jpg',
+    '/img/image_12.jpg',
+    '/img/image_7.png',
+    '/img/image_14.jpg',
+    
 ];
 const CompanyIG = styled.div`
     display: flex;
     align-items: center; // 세로 방향 정렬 확인
-    justify-content: space-between; // 가로 방향 여백 분배 확인
-    background-color: red;
+    justify-content: space-between;
     // max-height: 300px;
     height: 100%;
     position: relative;
@@ -61,8 +56,9 @@ const CompanyIGBox1 = styled.div`
     flex: 70%; // 여기서 flex 속성 값 조정
     display: flex;
     flex-direction: column;
-    background-color: #6A5ACD;
     height: 100%;
+    max-height: 280px;
+    position:relative;
 `;
 
 const CompanyIGBox2 = styled.div`
@@ -70,23 +66,33 @@ const CompanyIGBox2 = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #DA70D6;
     height: 100%;
+    padding-right: 15px;
 `;
 const TargetVision = styled.div`
     background-color: pink;
 `;
 
-const History = styled.div`
-    background-color: orange;
+const Certificate = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const Partners = styled.div`
-    background-color: skyblue;
+    background-color: #495959;
+    display: flex; // Flex 컨테이너로 설정
+    justify-content: center; // 가로 방향으로 중앙 정렬
+    align-items: center; // 세로 방향으로 중앙 정렬
+    height: 100%; // 높이 설정
+    position: relative;
+    max-height: 130px;
+    gap: 0px; // gap 속성 조정 또는 제거
+    z-index: -1;
 `;
 
-const CEOP = styled.div`
-    background-color: #00FFFF;
+
+const CEOP = styled.img`
     width: 240px;
     height: 280px;
 `;
@@ -113,6 +119,39 @@ const CompanyGreeting = styled.div`
     }
 `;
 
+const PartnersImage = styled.img`
+    width: 500px;
+    height: auto; 
+`;
+
+const PartnersTitle = styled.h2`
+    font-size: 20px;
+    width: 100%; // 가로 너비를 부모 컴포넌트의 100%로 설정
+    text-align: center; // 제목을 가운데 정렬하고 싶다면 추가
+    color: white;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    line-height: 44px;
+`;
+
+const CertificateImage = styled.img`
+    max-width: 185px;
+    max-height: 290px;
+    width: 100%;
+    height: 100%;
+`;
+
+const CEOSign = styled.img`
+    max-width: 130px;
+    max-height: 35px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+`;
+
 const Company = () => {
     return (
         <CompanyBackground>
@@ -122,8 +161,6 @@ const Company = () => {
                     <ImageSlider images={images} />
                 </CompanyGallery>
                 <Explanation>
-
-                    {/* 회사소개, 인사말, 대표이사 */}
                     <CompanyIG>
                         <CompanyIGBox1>
                             <CompanyIntroduction>
@@ -136,9 +173,10 @@ const Company = () => {
                                     인사말인사말인사말인사말인사말인사말인사말인사말인사말인사말인사말
                                 </p>
                             </CompanyGreeting>
+                            <CEOSign src='/img/sign.png' alt='CEO Sign'></CEOSign>
                         </CompanyIGBox1>
                         <CompanyIGBox2>
-                            <CEOP></CEOP>
+                            <CEOP src="/img/image_5.png" alt="CEO"></CEOP>
                         </CompanyIGBox2>
                     </CompanyIG>
 
@@ -148,13 +186,17 @@ const Company = () => {
                     </TargetVision>
 
                     {/* 연혁(마일스톤 IMG), 인증서 등 */}
-                    <History>
-                        연혁,인증서
-                    </History>
+                    <Certificate>
+                        <CertificateImage src='/img/certificate_1.png' alt='인증서'></CertificateImage>
+                        <CertificateImage src='/img/certificate_2.png' alt='인증서'></CertificateImage>
+                        <CertificateImage src='/img/certificate_3.png' alt='인증서'></CertificateImage>
+                        <CertificateImage src='/img/certificate_4.png' alt='인증서'></CertificateImage>
+                    </Certificate>
 
                     {/* 협력사 거래처로고 */}
                     <Partners>
-                        협력사 거래처 로고 이미지로 대체
+                        <PartnersTitle>협력사</PartnersTitle>
+                        <PartnersImage src='/img/image_10.jpg' alt="partners"></PartnersImage>
                     </Partners>
 
                 </Explanation>

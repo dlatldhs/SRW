@@ -4,8 +4,6 @@ import Footer from './Footer';
 import Header from './Header';
 
 const BusinessBackground = styled.div`
-    background-color: pink;
-
     height: 100%;
     max-height: 100vh;
     width: 100%;
@@ -20,7 +18,7 @@ const BusinessPage = styled.div`
     height: 80vh;
     max-width: 100vw;
     max-height:100vh;
-    background-color: #f0f0f0;
+    background-image: url('/img/background_1.jpg');
     position: relative;
 `
 
@@ -37,8 +35,7 @@ const Picture = styled.div`
     width: 100%;
     height:100%;
     max-width: 300px; 
-    max-height:435px; 
-    background-color: #5AD2FF;
+    max-height:435px;
     margin: 10px 10px;
     position: relative;
 
@@ -53,15 +50,14 @@ const Picture = styled.div`
 
 const Title = styled.h1`
     margin: 0 0 0 0;
-    background-color: #00FA9A;
     text-align: center;
     position: absolute;
     top: 0;
     width: 100%;
+    color: white;
 `
 const PictureExplane = styled.div`
     text-align: center;
-    background-color: yellow;
     max-height: 35px;
     height: 100%;
     font-size: 30px;
@@ -75,7 +71,7 @@ const Business = () => {
         <BusinessBackground>
             <Header />
             <BusinessPage>
-            <Title>사업 소개</Title>
+            <Title>사업분야</Title>
                 <BusinessExplain>
 
                     <Picture>

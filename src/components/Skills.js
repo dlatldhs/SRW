@@ -5,8 +5,7 @@ import Footer from './Footer';
 import YouTube from 'react-youtube';
 
 const SkillsBackground = styled.div`
-    background-color: pink;
-
+    background-image: url('/img/background_1.jpg');
     height: 100%;
     max-height: 150vh;
     width: 100%;
@@ -20,9 +19,11 @@ const SkillsPage = styled.div`
     height: 200vh;
     max-width: 100vw;
     max-height:200vh;
-    background-color: #f0f0f0;
+    // background-color: #f0f0f0;
     position: relative;
     flex-direction: column;
+    background-image: url('/img/background_2.jpg');
+    background-position: 40% 3000px;
 `
 const SkillsExplain = styled.div`
     display: flex; 
@@ -39,7 +40,7 @@ const Picture = styled.div`
     height:100%;
     max-width: 300px; 
     max-height:435px; 
-    background-color: #5AD2FF;
+    // background-color: #5AD2FF;
     margin: 10px 10px;
     position: relative;
 
@@ -53,7 +54,7 @@ const Picture = styled.div`
 `
 const PictureExplane = styled.div`
     text-align: center;
-    background-color: yellow;
+    // background-color: yellow;
     max-height: 35px;
     height: 100%;
     font-size: 30px;
@@ -63,7 +64,7 @@ const PictureExplane = styled.div`
 `
 const Title = styled.h1`
     margin: 0 0 0 0;
-    background-color: #00FA9A;
+    // background-color: #00FA9A;
     text-align: center;
     top: 0;
     width: 100%;

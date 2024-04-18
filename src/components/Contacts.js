@@ -7,10 +7,12 @@ import FormfacadeEmbed from "@formfacade/embed-react";
 
 const ContactsBackground = styled.div`
     background-color: pink;
-    height: 100%;
-    max-height: 100vh;
+    height: 180vh;
+    max-height: 180vh;
     width: 100%;
     max-width: 100vw;
+    background-image: url('/img/background_1.jpg');
+    background-repeat: repeat;
 `;
 
 const ContactsPage = styled.div`
@@ -21,7 +23,6 @@ const ContactsPage = styled.div`
     height: 60vh;
     max-width: 100vw;
     max-height:100vh;
-    background-color: #f0f0f0;
 `;
 
 const CustomerConnect = styled.div`
@@ -32,13 +33,11 @@ const CustomerConnect = styled.div`
     height: 130vh;
     max-width: 100vw;
     max-height:100vh;
-    background-color: blue;
     position: relative; /* 여기에 추가 */
 `;
 
 const Title = styled.div`
     margin: 0;
-    background-color: #00FA9A;
     text-align: center;
     position: absolute;
     top: 0;
@@ -68,11 +67,9 @@ const MapInfo = styled.div`
     max-width: 600px;
     height: 100%;
     width: 100%;
-    background-color: green;
 `;
 
 const Info = styled.div`
-    background-color: red;
     & > *:not(:last-child) { /* Info 컴포넌트의 모든 직접적인 자식에 대해, 마지막 자식을 제외하고 적용 */
         margin-bottom: 10px; /* 또는 원하는 간격에 맞춰 조절 */
     }
@@ -91,6 +88,8 @@ const InfoTitle = styled.h2`
 
 `;
 
+
+
 const Contacts = () => {
 
     return (
@@ -101,14 +100,14 @@ const Contacts = () => {
                 <MapInfo>
                     <Info>
                         <InfoTitle>Contacts</InfoTitle>
-                        <p>주소</p>    
+                        <p>부산광역시 강서구 미음산단5로41번길 77</p>    
                     </Info>
                     <PictureInfo></PictureInfo>
                 </MapInfo>
             </ContactsPage>
             <CustomerConnect>
                 <Title>고객 문의</Title>
-                <FormWrapper> {/* FormfacadeEmbed 컴포넌트를 FormWrapper로 감싸기 */}
+                <FormWrapper> 
                     <FormfacadeEmbed
                         formFacadeURL="https://formfacade.com/include/106597252125648279836/form/1FAIpQLSeWHmxuJOaVLxTrZEv5kIWsLLCdkc-L00XHHqqDs8MWYYc0UA/classic.js/?div=ff-compose"
                         onSubmitForm={() => console.log('Form submitted')}

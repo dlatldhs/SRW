@@ -12,12 +12,12 @@ const StyledHeader = styled.header`
   background-color: #ffffff;
 `;
 
-const Logo = styled.div`
-  max-width: 250px;
+const Logo = styled.img`
+  max-width: 230px;
   width: 100%;
-  max-height: 50px;
-  height: 50px;
-  background-color: red;
+  max-height: 64px;
+  height: 100%;
+  // background-color: red;
   left: 120px;
   position: absolute;
   cursor: pointer;
@@ -70,11 +70,11 @@ const Header = () => {
 
   return (
     <StyledHeader>
-      <Logo onClick={handleClickLogo}>로고 들어갈 자리</Logo>
+      <Logo onClick={handleClickLogo} src="/img/image_6.png" alt="LOGO"></Logo>
       <Navigation>
         <a href="company">회사소개</a>
-        <a href="business">사업소개</a>
-        <a href="skills">기술소개</a>
+        <a href="business">사업분야</a>
+        <a href="skills">서비스</a>
         <a href="contacts">Contacts</a>
       </Navigation>
     </StyledHeader>
