@@ -6,23 +6,23 @@ import YouTube from 'react-youtube';
 import ImageSliderMini from './ImageSliderMini';
 
 const PipeImages = [
-    '/img/skill_4_1.jpg',
-    '/img/skill_4_1.jpg',
+    '/img/skill_4_1.png',
+    '/img/skill_4_1.png',
 ];
 
 const HeatExchangerImages = [
-    '/img/skill_4_1.jpg',
-    '/img/skill_4_1.jpg',
+    '/img/skill_4_1.png',
+    '/img/skill_4_1.png',
 ];
 
 const PressureTankImages = [
-    '/img/skill_3_1.jpg',
-    '/img/skill_3_2.jpg',
+    '/img/skill_3_1.png',
+    '/img/skill_3_2.png',
 ];
 
 const ShipBuildingImages = [
-    '/img/skill_4_1.jpg',
-    '/img/skill_4_1.jpg',
+    '/img/skill_4_1.png',
+    '/img/skill_4_1.png',
 ];
 
 const SkillsBackground = styled.div`
