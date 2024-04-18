@@ -54,7 +54,7 @@ const Navigation = styled.nav`
     font-size: 17px;
 
     &:hover {
-      background-color: gray;
+      background-color: gray; opacity : 0.5;
       color: white;
     }
   }

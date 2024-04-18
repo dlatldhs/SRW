@@ -11,27 +11,56 @@ const CompanyBackground = styled.div`
     max-width: 100vw;
 `
 
+// const CompanyPage = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     height: 120vh;
+//     max-width: 100vw;
+//     max-height:100vh;
+// `
+
+// const CompanyGallery = styled.div`
+//     flex: 1;
+//     height: 100%;
+//     display: flex;
+//     position: relative;
+// `
+
+// const Explanation = styled.div`
+//     flex: 1;
+//     height: 100%;
+//     display: grid;
+//     gap: 20px; // 요소들 사이의 간격을 20px로 설정
+// `;
+
 const CompanyPage = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column; // 세로 방향으로 컴포넌트를 나열
     align-items: center;
-    width: 100%;
-    height: 120vh;
-    max-width: 100vw;
-    max-height:100vh;
+    width: 100vw; // 전체 화면 너비를 차지
+    min-height: 100vh; // 최소 높이 설정
+    // overflow: auto; // 내용이 넘칠 경우 스크롤 가능
 `
 
 const CompanyGallery = styled.div`
-    flex: 1;
-    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; // 전체 화면 너비를 차지
+    height: 90vh; // 높이를 90vh로 설정
     position: relative;
 `
 
 const Explanation = styled.div`
-    flex: 1;
-    height: 100%;
-    display: grid;
+    // background-color:pink;
+    display: flex;
+    flex-direction: column; // 세로 방향으로 내용을 나열
+    justify-content: center;
+    align-items: center;
+    width: 100vw; // 전체 화면 너비를 차지
+    height: 130vh; // 높이를 90vh로 설정
     gap: 20px; // 요소들 사이의 간격을 20px로 설정
 `;
 
@@ -59,6 +88,8 @@ const CompanyIGBox1 = styled.div`
     height: 100%;
     max-height: 280px;
     position:relative;
+    max-width: 75vw;
+    width: 100%;
 `;
 
 const CompanyIGBox2 = styled.div`
@@ -70,7 +101,16 @@ const CompanyIGBox2 = styled.div`
     padding-right: 15px;
 `;
 const TargetVision = styled.div`
-    background-color: pink;
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 150px;
+    align-text: center;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 `;
 
 const Certificate = styled.div`
@@ -89,6 +129,8 @@ const Partners = styled.div`
     max-height: 130px;
     gap: 0px; // gap 속성 조정 또는 제거
     z-index: -1;
+    max-width: 100vw;
+    width: 100%;
 `;
 
 
@@ -97,12 +139,12 @@ const CEOP = styled.img`
     height: 280px;
 `;
 
-const CompanyIntroduction = styled.div`
+const CompanyIntroduction = styled.p`
     flex: 1; // 여기에 추가
     height: 100%;
     max-height: 50vw;
-    width: 100%;
-    
+    width: 50vw;
+    line-height: 35px;
     p {
         padding: 10px 10px 10px 10px;
     }
@@ -152,6 +194,10 @@ const CEOSign = styled.img`
     bottom: 0;
 `;
 
+const VisionList = styled.li`
+    list-style-type: none;
+`;
+
 const Company = () => {
     return (
         <CompanyBackground>
@@ -164,15 +210,14 @@ const Company = () => {
                     <CompanyIG>
                         <CompanyIGBox1>
                             <CompanyIntroduction>
-                                <p>
-                                    회사소개회사소개회사소개회사소개회사소개회사소개회사소개회사소개회사소개회사소개회사소개회사소개회사소개회사소개
-                                </p>
+                                안녕하십니까, 스타로보웰즈의 대표이사 강길수입니다.<br></br>
+                                당사는 2023년에 설립되어 조선, 플랜트, 우주, 항공, 방산 산업 등 다양한 분야에 맞춤 로봇용접 솔루션을 제공하며,<br></br>
+                                든든한 파트너로서 고객과 함께 생산성 향상과 효율성을 극대화 하고 있습니다.<br></br>
+                                저희는 자체 개발한 로봇용접 통합 관리 솔루션을 통해 산업에 혁신적인 패러다임을 제시하고 있습니다.<br></br>
+                                이를 바탕으로 디지털용접 서비스(생산대행), 로봇용접사 교육 및 파견, 그리고 데이터 기반의 체계적인 관리 플랫폼을 제공하여, 대한민국 용접산업의 미래를 선도하고 글로벌 경쟁력을 강화하고자 합니다.<br></br>
+                                저희와 함께라면 귀사의 용접공정이 한층 더 혁신적이고 효율적으로 변모할 것입니다.<br></br>
+                                함께 미래를 만들어 갈 준비가 되셨습니까?
                             </CompanyIntroduction>
-                            <CompanyGreeting>
-                                <p>
-                                    인사말인사말인사말인사말인사말인사말인사말인사말인사말인사말인사말
-                                </p>
-                            </CompanyGreeting>
                             <CEOSign src='/img/sign.png' alt='CEO Sign'></CEOSign>
                         </CompanyIGBox1>
                         <CompanyIGBox2>
@@ -180,10 +225,15 @@ const Company = () => {
                         </CompanyIGBox2>
                     </CompanyIG>
 
-                    {/* 목표 비전 */}
+                    {/* 목표 비전
                     <TargetVision>
-                        목표 비전
-                    </TargetVision>
+                        <ul>
+                            <VisionList>- 기술적 리더십 확립</VisionList>
+                            <VisionList>- 고객의 생산성과 효율성 극대화</VisionList>
+                            <VisionList>- 로봇용접 교육과 인재 개발</VisionList>
+                            <VisionList>- 친환경 및 지속 가능성</VisionList>
+                        </ul>
+                    </TargetVision> */}
 
                     {/* 연혁(마일스톤 IMG), 인증서 등 */}
                     <Certificate>

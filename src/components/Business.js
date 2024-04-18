@@ -2,6 +2,39 @@ import React from 'react';
 import styled from 'styled-components';
 import Footer from './Footer';
 import Header from './Header';
+import ImageSliderMini from './ImageSliderMini';
+
+const PipeImages = [
+    '/img/item_1_1.png',
+    '/img/item_1_2.png',
+    '/img/item_1_3.png',
+    '/img/item_1_4.png',
+    '/img/item_1_5.png',
+];
+
+const HeatExchangerImages = [
+    '/img/item_2_1.png',
+    '/img/item_2_1.png',
+    '/img/item_2_1.png',
+    '/img/item_2_1.png',
+    '/img/item_2_1.png',
+];
+
+const PressureTankImages = [
+    '/img/item_3_1.png',
+    '/img/item_3_1.png',
+    '/img/item_3_1.png',
+    '/img/item_3_1.png',
+    '/img/item_3_1.png',
+];
+
+const ShipBuildingImages = [
+    '/img/item_4_1.png',
+    '/img/item_4_1.png',
+    '/img/item_4_1.png',
+    '/img/item_4_1.png',
+    '/img/item_4_1.png',
+];
 
 const BusinessBackground = styled.div`
     height: 100%;
@@ -15,9 +48,11 @@ const BusinessPage = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80vh;
+    height: 90vh;
+
     max-width: 100vw;
     max-height:100vh;
+
     background-image: url('/img/background_1.jpg');
     position: relative;
 `
@@ -36,6 +71,7 @@ const Picture = styled.div`
     height:100%;
     max-width: 300px; 
     max-height:435px;
+
     margin: 10px 10px;
     position: relative;
 
@@ -46,17 +82,9 @@ const Picture = styled.div`
     &:last-child {
         margin-right: 0; 
     }
-`
+`;
 
-const Title = styled.h1`
-    margin: 0 0 0 0;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    color: white;
-`
-const PictureExplane = styled.div`
+const PictureExplane = styled.p`
     text-align: center;
     max-height: 35px;
     height: 100%;
@@ -64,9 +92,28 @@ const PictureExplane = styled.div`
     width: 100%;
     position: absolute;
     bottom: 0;
-`
+    color: white;
+`;
+
+const Title = styled.h1`
+    margin: 0 0 0 0;
+    font-size:25px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    color: white;
+`;
+
+const ItemBox = styled.img`
+    max-width: 300px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+`;
 
 const Business = () => {
+
     return (
         <BusinessBackground>
             <Header />
@@ -75,28 +122,25 @@ const Business = () => {
                 <BusinessExplain>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={PipeImages} />
+                        <PictureExplane>Pipes Flange</PictureExplane>
                     </Picture>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={HeatExchangerImages} />
+                        <PictureExplane>heat exchanger</PictureExplane>
                     </Picture>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={PressureTankImages} />
+                        <PictureExplane>Pressure Tank</PictureExplane>
                     </Picture>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={ShipBuildingImages} />
+                        <PictureExplane>Ship building</PictureExplane>
                     </Picture>
+
                 </BusinessExplain>
             </BusinessPage>
             <Footer />

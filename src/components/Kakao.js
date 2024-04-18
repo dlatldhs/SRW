@@ -24,7 +24,7 @@ const KakaoMap = () => {
         loadKakaoMap();
     }, []);
 
-    return <div id="map" style={{ width: '600px', height: '400px', marginRight: '150px' }}></div>;
+    return <div id="map" style={{ width: '600px', height: '400px', marginRight: '75px' }}></div>;
 };
 
 export default KakaoMap;

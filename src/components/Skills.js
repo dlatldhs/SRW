@@ -3,6 +3,27 @@ import styled from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
 import YouTube from 'react-youtube';
+import ImageSliderMini from './ImageSliderMini';
+
+const PipeImages = [
+    '/img/skill_4_1.jpg',
+    '/img/skill_4_1.jpg',
+];
+
+const HeatExchangerImages = [
+    '/img/skill_4_1.jpg',
+    '/img/skill_4_1.jpg',
+];
+
+const PressureTankImages = [
+    '/img/skill_3_1.jpg',
+    '/img/skill_3_2.jpg',
+];
+
+const ShipBuildingImages = [
+    '/img/skill_4_1.jpg',
+    '/img/skill_4_1.jpg',
+];
 
 const SkillsBackground = styled.div`
     background-image: url('/img/background_1.jpg');
@@ -10,21 +31,21 @@ const SkillsBackground = styled.div`
     max-height: 150vh;
     width: 100%;
     max-width: 100vw;
-`
+`;
 const SkillsPage = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 200vh;
+
     max-width: 100vw;
     max-height:200vh;
-    // background-color: #f0f0f0;
-    position: relative;
-    flex-direction: column;
+
     background-image: url('/img/background_2.jpg');
     background-position: 40% 3000px;
-`
+    position: relative;
+`;
 const SkillsExplain = styled.div`
     display: flex; 
     justify-content: space-between; 
@@ -34,13 +55,14 @@ const SkillsExplain = styled.div`
     position: absolute;
     top: 0px;
     max-height: 700px;
-`
+    background-color: gary;
+`;
 const Picture = styled.div`
     width: 100%;
     height:100%;
     max-width: 300px; 
-    max-height:435px; 
-    // background-color: #5AD2FF;
+    max-height:435px;
+
     margin: 10px 10px;
     position: relative;
 
@@ -51,25 +73,27 @@ const Picture = styled.div`
     &:last-child {
         margin-right: 0; 
     }
-`
-const PictureExplane = styled.div`
+`;
+
+const PictureExplane = styled.p`
     text-align: center;
-    // background-color: yellow;
     max-height: 35px;
     height: 100%;
     font-size: 30px;
     width: 100%;
     position: absolute;
     bottom: 0;
-`
+    color: white;
+`;
 const Title = styled.h1`
     margin: 0 0 0 0;
-    // background-color: #00FA9A;
+    font-size:25px;
     text-align: center;
+    position: absolute;
     top: 0;
     width: 100%;
-    position: absolute;
-`
+    color: white;
+`;
 
 const ResponsiveYoutubeContainer = styled.div`
   position: absolute;
@@ -88,6 +112,13 @@ const ResponsiveYoutubeContainer = styled.div`
   }
 `;
 
+const ItemBox = styled.img`
+    max-width: 300px;
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+`;
+
 const video = 'https://www.youtube.com/watch?v='
 
 const Skills = () => {
@@ -95,31 +126,27 @@ const Skills = () => {
         <SkillsBackground>
             <Header />
             <SkillsPage>
-                <Title>기술 소개</Title>
+                <Title>서비스</Title>
                 <SkillsExplain>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={PipeImages} />
+                        <PictureExplane>로봇용접<br></br>공정개발</PictureExplane>
                     </Picture>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={HeatExchangerImages} />
+                        <PictureExplane>디지털<br></br>용접서비스</PictureExplane>
                     </Picture>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={PressureTankImages} />
+                        <PictureExplane>오퍼레이터<br></br>파견</PictureExplane>
                     </Picture>
 
                     <Picture>
-                        <PictureExplane>
-                            로봇용접 공정개발
-                        </PictureExplane>
+                        <ImageSliderMini  images={ShipBuildingImages} />
+                        <PictureExplane>로봇용접사<br></br>교육</PictureExplane>
                     </Picture>
 
                 </SkillsExplain>
