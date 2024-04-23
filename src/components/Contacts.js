@@ -89,7 +89,6 @@ const InfoTitle = styled.h2`
 `;
 
 
-
 const Contacts = () => {
 
     return (
