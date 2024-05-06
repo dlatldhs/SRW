@@ -6,23 +6,42 @@ import Kakao from './Kakao';
 import FormfacadeEmbed from "@formfacade/embed-react";
 
 const ContactsBackground = styled.div`
-    background-color: pink;
+    background-color: white;
     height: 180vh;
     max-height: 180vh;
     width: 100%;
     max-width: 100vw;
-    background-image: url('/img/background_1.jpg');
-    background-repeat: repeat;
+    // background-image: url('/img/background_1.jpg');
+    // background-repeat: repeat;
 `;
 
 const ContactsPage = styled.div`
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // width: 100%;
+    // height: 60vh;
+    // max-width: 100vw;
+    // max-height:100vh;
+
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    // width: 100%;
+    // height: 70vh;
+    // max-width: 100vw;
+    // max-height:100vh;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60vh;
+    height: 100vh;
     max-width: 100vw;
     max-height:100vh;
+
 `;
 
 const CustomerConnect = styled.div`
@@ -44,6 +63,7 @@ const Title = styled.div`
     width: 100%;
     height: 44px;
     line-height: 44px;
+    background-color: #c0c0c0;
 `;
 
 const FormWrapper = styled.div`
@@ -63,24 +83,47 @@ const FormWrapper = styled.div`
 `;
 
 const MapInfo = styled.div`
-    max-height: 400px;
-    max-width: 600px;
+    // max-height: 400px;
+    // max-width: 600px;
+    // height: 100%;
+    // width: 100%;
+
+    // flex: 0.2; // MapInfo가 20% 차지
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+
+    flex: 0.2; // MapInfo가 20% 차지
     height: 100%;
-    width: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    align-items: center;
 `;
 
 const Info = styled.div`
-    & > *:not(:last-child) { /* Info 컴포넌트의 모든 직접적인 자식에 대해, 마지막 자식을 제외하고 적용 */
-        margin-bottom: 10px; /* 또는 원하는 간격에 맞춰 조절 */
-    }
+    // & > *:not(:last-child) { /* Info 컴포넌트의 모든 직접적인 자식에 대해, 마지막 자식을 제외하고 적용 */
+    //     margin-bottom: 10px; /* 또는 원하는 간격에 맞춰 조절 */
+    // }
+    text-align: center;
+    margin-bottom: 20px;
 `;
 
-const PictureInfo = styled.div`
-    max-height: 331px;
-    max-width: 600px;
+const PictureInfo = styled.p`
+    // max-height: 331px;
+    // max-width: 600px;
+    // height: 100%;
+    // width: 100%;
+    // background-color: pink;
+
+    width: 100vw;
     height: 100%;
-    width: 100%;
-    background-color: pink;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 `;
 
 const InfoTitle = styled.h2`
@@ -94,16 +137,7 @@ const Contacts = () => {
     return (
         <ContactsBackground>
             <Header />
-            <ContactsPage>
-                <Kakao />
-                <MapInfo>
-                    <Info>
-                        <InfoTitle>Contacts</InfoTitle>
-                        <p>부산광역시 강서구 미음산단5로41번길 77</p>    
-                    </Info>
-                    <PictureInfo></PictureInfo>
-                </MapInfo>
-            </ContactsPage>
+            
             <CustomerConnect>
                 <Title>고객 문의</Title>
                 <FormWrapper> 
@@ -113,6 +147,18 @@ const Contacts = () => {
                     />
                 </FormWrapper>
             </CustomerConnect>
+
+            <ContactsPage>
+                <Kakao />
+                
+                {/* <MapInfo> */}
+                    {/* <Info>
+                        <InfoTitle>Contacts</InfoTitle> 
+                    </Info> */}
+                    {/* <PictureInfo>부산사무실 : 부산광역시 강서구 미음산단5로41번길 77<br></br>부산 공장 : 부산광역시 강서구 미음산단4로 32<br></br>전화번호 055) 362-9992<br></br>이메일 starobt@naver.com</PictureInfo> */}
+                {/* </MapInfo> */}
+            </ContactsPage>
+
             <Footer />
         </ContactsBackground>
     );

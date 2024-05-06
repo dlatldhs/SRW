@@ -41,6 +41,8 @@ const BusinessBackground = styled.div`
     max-height: 100vh;
     width: 100%;
     max-width: 100vw;
+    
+    background-color: white;
 `
 
 const BusinessPage = styled.div`

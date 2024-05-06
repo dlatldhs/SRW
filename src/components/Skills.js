@@ -26,11 +26,12 @@ const ShipBuildingImages = [
 ];
 
 const SkillsBackground = styled.div`
-    background-image: url('/img/background_1.jpg');
+    // background-image: url('/img/background_1.jpg');
     height: 100%;
     max-height: 150vh;
     width: 100%;
     max-width: 100vw;
+    background-color: white;
 `;
 const SkillsPage = styled.div`
     display: flex;
@@ -101,7 +102,7 @@ const ResponsiveYoutubeContainer = styled.div`
   width: 90vw; // 뷰포트 너비의 80%
   padding-top: 45vh; // 높이를 너비의 비율에 맞춰 조정
   overflow: hidden;
-  height: 50vh;
+  height: 100vh;
 
   iframe {
     position: absolute;

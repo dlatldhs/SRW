@@ -1,7 +1,14 @@
 /* global kakao */
 import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
 const KakaoMap = () => {
+    const Kakao = styled.div`
+        height: 90%;
+        max-height: 1200px;
+        max-width: 1200px;
+        width: 100vw;
+    `;
     useEffect(() => {
         const loadKakaoMap = () => {
             const script = document.createElement('script');
@@ -14,7 +21,7 @@ const KakaoMap = () => {
                     const container = document.getElementById('map');
                     const options = {
                         center: new kakao.maps.LatLng(35.1608594, 128.8675003),
-                        level: 3,
+                        level: 5,
                     };
                     const map = new kakao.maps.Map(container, options);
                 });
@@ -23,8 +30,8 @@ const KakaoMap = () => {
 
         loadKakaoMap();
     }, []);
-
-    return <div id="map" style={{ width: '600px', height: '400px', marginRight: '75px' }}></div>;
+    
+    return <Kakao id="map"></Kakao>
 };
 
 export default KakaoMap;

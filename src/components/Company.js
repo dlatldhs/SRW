@@ -6,42 +6,18 @@ import ImageSlider from './ImageSlider';
 
 const CompanyBackground = styled.div`
     height: 100%;
-    max-height: 100vh;
+    // max-height: 100vh;
+    max-height: auto;
     width: 100%;
     max-width: 100vw;
 `
-
-// const CompanyPage = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%;
-//     height: 120vh;
-//     max-width: 100vw;
-//     max-height:100vh;
-// `
-
-// const CompanyGallery = styled.div`
-//     flex: 1;
-//     height: 100%;
-//     display: flex;
-//     position: relative;
-// `
-
-// const Explanation = styled.div`
-//     flex: 1;
-//     height: 100%;
-//     display: grid;
-//     gap: 20px; // 요소들 사이의 간격을 20px로 설정
-// `;
 
 const CompanyPage = styled.div`
     display: flex;
     flex-direction: column; // 세로 방향으로 컴포넌트를 나열
     align-items: center;
     width: 100vw; // 전체 화면 너비를 차지
-    min-height: 100vh; // 최소 높이 설정
-    // overflow: auto; // 내용이 넘칠 경우 스크롤 가능
+    // min-height: 100vh; // 최소 높이 설정
 `
 
 const CompanyGallery = styled.div`
@@ -49,12 +25,12 @@ const CompanyGallery = styled.div`
     justify-content: center;
     align-items: center;
     width: 100vw; // 전체 화면 너비를 차지
-    height: 90vh; // 높이를 90vh로 설정
+    // height: 90vh; // 높이를 90vh로 설정
+    height: 60vh;
     position: relative;
 `
 
 const Explanation = styled.div`
-    // background-color:pink;
     display: flex;
     flex-direction: column; // 세로 방향으로 내용을 나열
     justify-content: center;
@@ -71,6 +47,7 @@ const images = [
     '/img/image_14.jpg',
     
 ];
+
 const CompanyIG = styled.div`
     display: flex;
     align-items: center; // 세로 방향 정렬 확인
@@ -100,6 +77,7 @@ const CompanyIGBox2 = styled.div`
     height: 100%;
     padding-right: 15px;
 `;
+
 const TargetVision = styled.div`
     width: 100%;
     max-width: 100vw;
@@ -225,17 +203,6 @@ const Company = () => {
                         </CompanyIGBox2>
                     </CompanyIG>
 
-                    {/* 목표 비전
-                    <TargetVision>
-                        <ul>
-                            <VisionList>- 기술적 리더십 확립</VisionList>
-                            <VisionList>- 고객의 생산성과 효율성 극대화</VisionList>
-                            <VisionList>- 로봇용접 교육과 인재 개발</VisionList>
-                            <VisionList>- 친환경 및 지속 가능성</VisionList>
-                        </ul>
-                    </TargetVision> */}
-
-                    {/* 연혁(마일스톤 IMG), 인증서 등 */}
                     <Certificate>
                         <CertificateImage src='/img/certificate_1.png' alt='인증서'></CertificateImage>
                         <CertificateImage src='/img/certificate_2.png' alt='인증서'></CertificateImage>
@@ -243,7 +210,6 @@ const Company = () => {
                         <CertificateImage src='/img/certificate_4.png' alt='인증서'></CertificateImage>
                     </Certificate>
 
-                    {/* 협력사 거래처로고 */}
                     <Partners>
                         <PartnersTitle>협력사</PartnersTitle>
                         <PartnersImage src='/img/image_10.jpg' alt="partners"></PartnersImage>
