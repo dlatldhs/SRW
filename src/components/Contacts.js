@@ -8,7 +8,7 @@ import FormfacadeEmbed from "@formfacade/embed-react";
 const ContactsBackground = styled.div`
     background-color: white;
     height: 180vh;
-    max-height: 180vh;
+    max-height: 270vh;
     width: 100%;
     max-width: 100vw;
     // background-image: url('/img/background_1.jpg');
@@ -45,25 +45,26 @@ const ContactsPage = styled.div`
 `;
 
 const CustomerConnect = styled.div`
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 130vh;
+    height: 100%;
     max-width: 100vw;
-    max-height:100vh;
+    max-height:200vh;
     position: relative; /* 여기에 추가 */
 `;
 
 const Title = styled.div`
     margin: 0;
     text-align: center;
-    position: absolute;
+    // position: absolute;
     top: 0;
     width: 100%;
     height: 44px;
     line-height: 44px;
     background-color: #c0c0c0;
+    margin-bottom: 20px;
 `;
 
 const FormWrapper = styled.div`
@@ -132,7 +133,10 @@ const InfoTitle = styled.h2`
 `;
 
 
+
 const Contacts = () => {
+
+    const url="https://formfacade.com/include/116703339410389346194/form/1FAIpQLSfaaocgdeO4E_ffGB5l6VOqzfiUglHXeCxaRCAjZETqSS92rw/classic.js/?div=ff-compose";
 
     return (
         <ContactsBackground>
@@ -140,23 +144,20 @@ const Contacts = () => {
             
             <CustomerConnect>
                 <Title>고객 문의</Title>
-                <FormWrapper> 
-                    <FormfacadeEmbed
-                        formFacadeURL="https://formfacade.com/include/106597252125648279836/form/1FAIpQLSeWHmxuJOaVLxTrZEv5kIWsLLCdkc-L00XHHqqDs8MWYYc0UA/classic.js/?div=ff-compose"
-                        onSubmitForm={() => console.log('Form submitted')}
-                    />
-                </FormWrapper>
-            </CustomerConnect>
+                <FormfacadeEmbed
+                    formFacadeURL={url}
+                    onSubmitForm={() => console.log('Form submitted')}
+                />
+            </CustomerConnect>      
 
             <ContactsPage>
                 <Kakao />
-                
-                {/* <MapInfo> */}
-                    {/* <Info>
+                <MapInfo>
+                    <Info>
                         <InfoTitle>Contacts</InfoTitle> 
-                    </Info> */}
-                    {/* <PictureInfo>부산사무실 : 부산광역시 강서구 미음산단5로41번길 77<br></br>부산 공장 : 부산광역시 강서구 미음산단4로 32<br></br>전화번호 055) 362-9992<br></br>이메일 starobt@naver.com</PictureInfo> */}
-                {/* </MapInfo> */}
+                    </Info>
+                    <PictureInfo>부산사무실 : 부산광역시 강서구 미음산단5로41번길 77<br></br>부산 공장 : 부산광역시 강서구 미음산단4로 32<br></br>전화번호 055) 362-9992<br></br>이메일 starobt@naver.com</PictureInfo>
+                </MapInfo>
             </ContactsPage>
 
             <Footer />

@@ -73,8 +73,8 @@ const Header = () => {
       <Logo onClick={handleClickLogo} src="/img/image_6.png" alt="LOGO"></Logo>
       <Navigation>
         <a href="company">회사소개</a>
-        <a href="business">사업분야</a>
-        <a href="skills">서비스</a>
+        <a href="business">사업소개</a>
+        {/* <a href="skills">서비스</a> */}
         <a href="contacts">Contacts</a>
       </Navigation>
     </StyledHeader>

@@ -5,9 +5,9 @@ import styled from 'styled-components';
 const KakaoMap = () => {
     const Kakao = styled.div`
         height: 90%;
-        max-height: 1200px;
+        max-height: 800px;
         max-width: 1200px;
-        width: 100vw;
+        width: 60vw;
     `;
     useEffect(() => {
         const loadKakaoMap = () => {
