@@ -53,6 +53,8 @@ const CustomerConnect = styled.div`
     max-width: 100vw;
     max-height:200vh;
     position: relative; /* 여기에 추가 */
+    
+    overflow-y: hidden;
 `;
 
 const Title = styled.div`
@@ -136,18 +138,21 @@ const InfoTitle = styled.h2`
 
 const Contacts = () => {
 
-    const url="https://formfacade.com/include/116703339410389346194/form/1FAIpQLSfaaocgdeO4E_ffGB5l6VOqzfiUglHXeCxaRCAjZETqSS92rw/classic.js/?div=ff-compose";
-
+    // const url="https://formfacade.com/include/116703339410389346194/form/1FAIpQLSfaaocgdeO4E_ffGB5l6VOqzfiUglHXeCxaRCAjZETqSS92rw/classic.js/?div=ff-compose";
+    // const url="https://formfacade.com/include/106597252125648279836/form/1FAIpQLSeWHmxuJOaVLxTrZEv5kIWsLLCdkc-L00XHHqqDs8MWYYc0UA/classic.js/?div=ff-compose"
+    const url="https://formfacade.com/include/105207456793860182179/form/1FAIpQLSfe6zQIt4Io-EoKjeco-bKNMAcLGOzLtIgKtglwkvfM_RoY_Q/classic.js/?div=ff-compose"
+    // const url="https://formfacade.com/include/116703339410389346194/form/1FAIpQLSfMgp0--jltWUwshAiPrkVMFDGSxG6Th-FlcP0qs9hIXqd4_w/classic.js/?div=ff-compose"
     return (
         <ContactsBackground>
             <Header />
             
             <CustomerConnect>
                 <Title>고객 문의</Title>
-                <FormfacadeEmbed
+                {/* <FormfacadeEmbed
                     formFacadeURL={url}
                     onSubmitForm={() => console.log('Form submitted')}
-                />
+                /> */}
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfO_K3RS0UlUuZo_kJEHB1mP1YAC-GhhqPZAoQ5G_ggHjebyA/viewform?embedded=true" width="100%" height="2787" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>    
             </CustomerConnect>      
 
             <ContactsPage>
