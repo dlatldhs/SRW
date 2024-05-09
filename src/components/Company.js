@@ -30,37 +30,23 @@ const Company = () => {
                             <S.CEOP src="/img/image_5.png" alt="CEO"></S.CEOP>
                         </S.CompanyIGBox2>
                     </S.CompanyIG>
-
                     <S.VisionBox>
                         <S.VisionTitle>목표 비전</S.VisionTitle>
-                        <S.VisionIntroduction>
-                        1. 기술적 리더십 확립<br></br>
-                        2. 고객의 생산성과 효율성 극대화<br></br>
-                        3. 로봇용접 교육 및 인재 개발<br></br>
-                        4. 친환경 및 지속 가능성 추구<br></br>
-                        </S.VisionIntroduction>
+                        <S.VisionIntroduction> 1. 기술적 리더십 확립<br></br> 2. 고객의 생산성과 효율성 극대화<br></br> 3. 로봇용접 교육 및 인재 개발<br></br> 4. 친환경 및 지속 가능성 추구<br></br></S.VisionIntroduction>
                     </S.VisionBox>
-                    
                     <S.HistoryBox>
                         <S.HistoryImage src='/img/history.png' alt='연혁'></S.HistoryImage>
                     </S.HistoryBox>
-
                     <S.Certificate>
-                        <S.CertificateImage src='/img/certificate_1.png' alt='인증서'></S.CertificateImage>
-                        <S.CertificateImage src='/img/certificate_2.png' alt='인증서'></S.CertificateImage>
-                        <S.CertificateImage src='/img/certificate_3.png' alt='인증서'></S.CertificateImage>
-                        <S.CertificateImage src='/img/certificate_4.png' alt='인증서'></S.CertificateImage>
+                        <S.CertificateImage src='/img/certificate_1.png' alt='인증서'></S.CertificateImage> <S.CertificateImage src='/img/certificate_2.png' alt='인증서'></S.CertificateImage><S.CertificateImage src='/img/certificate_3.png' alt='인증서'></S.CertificateImage><S.CertificateImage src='/img/certificate_4.png' alt='인증서'></S.CertificateImage>
                     </S.Certificate>
-
-                    <S.Partners>
-                        <S.PartnersTitle>협력사</S.PartnersTitle>
-                        <S.PartnersImage src='/img/image_10.jpg' alt="partners"></S.PartnersImage>
-                    </S.Partners>
                 </S.Explanation>
+                <S.PartnersContainer>
+                    <S.PartnersImage src='/img/image_10.jpg' alt="partners"></S.PartnersImage>
+                </S.PartnersContainer>
             </S.CompanyPage>
             <Footer />
         </S.CompanyBackground>
     );
 };
-
 export default Company;

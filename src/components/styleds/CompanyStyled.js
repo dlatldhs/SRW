@@ -1,194 +1,172 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const theme = {
+  sizes: {
+    mobile: 480,
+    tablet: 768,
+    desktop: 1024,
+  },
+  media: {
+    mobile: (...args) => `@media (max-width: ${theme.sizes.mobile}px) {
+      ${args}
+    }`,
+    tablet: (...args) => `@media (min-width: ${theme.sizes.mobile + 1}px) and (max-width: ${theme.sizes.tablet}px) {
+      ${args}
+    }`,
+    desktop: (...args) => `@media (min-width: ${theme.sizes.tablet + 1}px) {
+      ${args}
+    }`,
+  },
+};
 
 export const CompanyBackground = styled.div`
-    height: 100%;
-    // max-height: 100vh;
-    max-height: auto;
-    width: 100%;
-    max-width: 100vw;
+  background-color: #f5f5f5;
 `;
 
 export const CompanyPage = styled.div`
-    display: flex;
-    flex-direction: column; // 세로 방향으로 컴포넌트를 나열
-    align-items: center;
-    width: 100%; // 전체 화면 너비를 차지
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 `;
 
 export const CompanyGallery = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw; // 전체 화면 너비를 차지
-    height: 90vh; // 높이를 90vh로 설정
-    position: relative;
+  height: 90vh;
+  width: 100%;
 `;
 
 export const Explanation = styled.div`
-    display: flex;
-    flex-direction: column; // 세로 방향으로 내용을 나열
-    justify-content: center;
-    align-items: center;
-    width: 100vw; // 전체 화면 너비를 차지
-    height: 294vh; // 높이를 90vh로 설정
-    gap: 20px; // 요소들 사이의 간격을 20px로 설정
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
-export const images = [
-    '/img/image_11.jpg',
-    '/img/image_12.jpg',
-    '/img/image_7.png',
-    
-];
-
 export const CompanyIG = styled.div`
-    display: flex;
-    align-items: center; // 세로 방향 정렬 확인
-    justify-content: space-between;
-    // max-height: 300px;
-    height: 100%;
-    position: relative;
-    max-width: 80vw;
-    width: 100%;
-    max-height: 550px;
+  display: flex;
+  width: 100%;
+  margin-top: 3rem;
 `;
 
 export const CompanyIGBox1 = styled.div`
-    flex: 70%; // 여기서 flex 속성 값 조정
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    max-height: 420px;
-    position:relative;
-    max-width: 75vw;
-    width: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
-export const CompanyIntroduction = styled.p`
-    flex: 1; // 여기에 추가
-    height: 100%;
-    max-height: 50vw;
-    width: 50vw;
-    line-height: 45px;
-    p {
-        padding: 10px 10px 10px 10px;
-    }
-    font-size: 20px;
+export const CompanyIntroduction = styled.div`
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: left;
 `;
 
 export const CEOSign = styled.img`
-    max-width: 130px;
-    max-height: 35px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    right: 20px;
-    bottom: 0;
+  width: 150px;
+  margin-top: 2rem;
 `;
 
 export const CompanyIGBox2 = styled.div`
-    flex: 30%; // 여기서 flex 속성 값 조정
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding-right: 15px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const CEOP = styled.img`
-    width: 360px;
-    height: 420px;
+  width: 80%;
+  height: auto;
 `;
 
 export const VisionBox = styled.div`
-    width: 100%;
-    max-width: 100vw;
-    height: 100%;
-    max-height: 250px;
-    align-text: center;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`;
-
-export const VisionIntroduction = styled.p`
-    flex: 1; // 여기에 추가
-    height: 100%;
-    max-height: 50vw;
-    width: 50vw;
-    line-height: 45px;
-    p {
-        padding: 10px 10px 10px 10px;
-    }
-    font-size: 20px;
-    width: 80vw;
+  width: 100%;
+  margin-top: 3rem;
 `;
 
 export const VisionTitle = styled.h2`
-    font-size: 35px;
-    width: 100%; // 가로 너비를 부모 컴포넌트의 100%로 설정
-    text-align: center; // 제목을 가운데 정렬하고 싶다면 추가
-    margin: 0;
-    line-height: 44px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+`;
+
+export const VisionIntroduction = styled.div`
+  font-size: 1.2rem;
+  line-height: 1.8;
 `;
 
 export const HistoryBox = styled.div`
-    width: 100%;
-    max-width: 100vw;
-    height: 100%;
-    max-height: 1120px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  max-height: 1120px;
+  margin-top: 3rem;
+  overflow: hidden;
 `;
 
 export const HistoryImage = styled.img`
-    width: 100%;
+  width: 100%;
+  height: auto;
 `;
 
 export const Certificate = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-height: 650px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+
+  > img {
+    width: 20%;
+    height: auto;
+    margin: 1rem;
+
+    ${theme.media.mobile`
+      width: 45%;
+    `}
+
+    ${theme.media.tablet`
+      width: 30%;
+    `}
+
+    ${theme.media.desktop`
+      width: 20%;
+    `}
+  }
 `;
 
 export const CertificateImage = styled.img`
-    max-height: 640px;
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: auto;
 `;
 
-export const Partners = styled.div`
-    background-color: #495959;
-    display: flex; // Flex 컨테이너로 설정
-    justify-content: center; // 가로 방향으로 중앙 정렬
-    align-items: center; // 세로 방향으로 중앙 정렬
-    height: 100%; // 높이 설정
-    position: relative;
-    max-height: 200px;
-    gap: 0px; // gap 속성 조정 또는 제거
-    z-index: -1;
-    max-width: 100vw;
-    width: 100%;
+export const PartnersContainer = styled.div`
+  width: 100%;
+  margin-top: 3rem;
+  position: relative;
+  background-color: #495959; // 배경색을 pink로 설정하여 크기 확인
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+
+  ${theme.media.mobile`
+    height: 300px;
+  `}
+
+  ${theme.media.tablet`
+    height: 248px;
+  `}
+
+  ${theme.media.desktop`
+    height: 248px;
+  `}
 `;
 
 export const PartnersImage = styled.img`
-    // width: ;
-    height: 200px; 
+  position: absolute;
+  bottom: 0;
 `;
 
-export const PartnersTitle = styled.h2`
-    font-size: 20px;
-    width: 100%; // 가로 너비를 부모 컴포넌트의 100%로 설정
-    text-align: center; // 제목을 가운데 정렬하고 싶다면 추가
-    color: white;
-    position: absolute;
-    top: 0;
-    margin: 0;
-    line-height: 44px;
-`;
+export const images = [
+  '/img/image_11.jpg',
+  '/img/image_12.jpg',
+  '/img/image_7.png',
+];

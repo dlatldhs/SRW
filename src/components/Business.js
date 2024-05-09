@@ -6,15 +6,13 @@ import YouTube from 'react-youtube';
 import * as S from "./styleds/BusinessStyled";
 
 const Business = () => {
-
     return (
         <S.BusinessBackground>
             <Header />
             <S.BusinessPage>
-            <S.Title>사업분야</S.Title>
+                <S.Title>사업분야</S.Title>
                 <S.BusinessExplain>
                     <S.Picture>
-                        {/* <ImageSliderMini  images={S.PipeImages} /> */}
                         <S.BusinessImage  src='/img/b_1.png' alt='사업분야' ></S.BusinessImage>
                         <S.PictureExplane>로봇용접 공정개발</S.PictureExplane>
                     </S.Picture>
@@ -36,24 +34,20 @@ const Business = () => {
                 </S.BusinessExplain>
             </S.BusinessPage>
             <S.ItemPage>
-            <S.ItemTitle>아이템</S.ItemTitle>
+                <S.ItemTitle>아이템</S.ItemTitle>
                 <S.BusinessExplain>
-
                     <S.Picture>
                         <ImageSliderMini images={S.PipeImages}></ImageSliderMini>
                         <S.PictureExplane>Pipes Flange</S.PictureExplane>
                     </S.Picture>
-
                     <S.Picture>
                         <ImageSliderMini images={S.HeatExchangerImages}></ImageSliderMini>
                         <S.PictureExplane>channel cover</S.PictureExplane>
                     </S.Picture>
-
                     <S.Picture>
                         <ImageSliderMini images={S.PressureTankImages}></ImageSliderMini>
                         <S.PictureExplane>pressure vessel</S.PictureExplane>
                     </S.Picture>
-
                     <S.Picture>
                         <S.BusinessImage src='/img/i_7.png' alt='아이템'></S.BusinessImage>
                         <S.PictureExplane>기타</S.PictureExplane>
@@ -61,9 +55,7 @@ const Business = () => {
 
                 </S.BusinessExplain>
             </S.ItemPage>
-
             <S.YoutubePage>
-                {/* <S.YoutubeBox> */}
                     <YouTube
                         videoId="RiYEyRrDG3Q"
                         id="RiYEyRrDG3Q"
@@ -77,7 +69,6 @@ const Business = () => {
                             event.target.pauseVideo();
                         }}
                     />
-                {/* </S.YoutubeBox> */}
             </S.YoutubePage>
             <Footer />
         </S.BusinessBackground>

@@ -1,34 +1,51 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+
+const theme = {
+    sizes: {
+      mobile: 480,
+      tablet: 768,
+      desktop: 1024,
+    },
+    media: {
+      mobile: (...args) => `@media (max-width: ${theme.sizes.mobile}px) {
+        ${args}
+      }`,
+      tablet: (...args) => `@media (min-width: ${theme.sizes.mobile + 1}px) and (max-width: ${theme.sizes.tablet}px) {
+        ${args}
+      }`,
+      desktop: (...args) => `@media (min-width: ${theme.sizes.tablet + 1}px) {
+        ${args}
+      }`,
+    },
+  };
 
 export const PipeImages = [
     '/img/i_1.png',
     '/img/i_2.png',
 ];
-
 export const HeatExchangerImages = [
     '/img/i_3.png',
     '/img/i_4.png',
 ];
-
 export const PressureTankImages = [
     '/img/i_5.png',
     '/img/i_6.png',
 ];
-
 export const ShipBuildingImages = [
     '/img/i_7.png',
 ];
 
-export const Title = styled.h1`
+
+export const Title = styled.h2`
     margin: 0 0 0 0;
-    font-size:40px;
+    font-size:35px;
     text-align: center;
     position: absolute;
     top: 0;
     width: 100%;
-    color: black;
+    color: white;
+    background-color: #333333;
 `;
-
 export const BusinessExplain = styled.div`
     display: flex; 
     justify-content: space-between; 
@@ -37,54 +54,65 @@ export const BusinessExplain = styled.div`
     height: 100%;
     padding: 100px 100px;
 `;
-
 export const BusinessImage = styled.img`
     width: 100%;
     height: 100%;
     max-height: 400px;
+    
 `;
-
 export const BusinessBackground = styled.div`
     height: 100%;
     max-height: 100vh;
     width: 100%;
     max-width: 100vw;
-    
     background-color: white;
 `
+// export const BusinessPage = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     width: 100%;
+//     height: 90vh;
+//     max-width: 100vw;
+//     max-height:100vh;
+//     position: relative;
+// `
 
 export const BusinessPage = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  position: relative;
 
-    max-width: 100vw;
-    max-height:100vh;
+  ${theme.media.mobile`
+    height: auto;
+    padding: 50px 0;
+  `}
 
-    // background-image: url('/img/background_1.jpg');
-    position: relative;
-`
+  ${theme.media.tablet`
+    height: auto;
+    padding: 80px 0;
+  `}
+`;
 
 export const Picture = styled.div`
     width: 100%;
     height:100%;
     max-width: 300px; 
     max-height:435px;
-
     margin: 10px 10px;
     position: relative;
-
     &:first-child {
         margin-left: 0; 
     }
-
     &:last-child {
         margin-right: 0; 
     }
 `;
-
 export const PictureExplane = styled.p`
     text-align: center;
     max-height: 35px;
@@ -95,43 +123,54 @@ export const PictureExplane = styled.p`
     bottom: 0;
     color: black;
 `;
-
 export const ItemBox = styled.img`
     max-width: 300px;
     max-height: 400px;
     width: 100%;
     height: 100%;
 `;
+// export const ItemPage = styled.div`
+//     width: 100%;
+//     height: 90vh;
+// `;
 
 export const ItemPage = styled.div`
-    width: 100%;
-    height: 90vh;
+  width: 100%;
+  height: 90vh;
+
+  ${theme.media.mobile`
+    height: auto;
+    padding: 50px 0;
+  `}
+
+  ${theme.media.tablet`
+    height: auto;
+    padding: 80px 0;
+  `}
 `;
 
-export const ItemTitle = styled.h1`
+
+export const ItemTitle = styled.h2`
     margin: 0 0 0 0;
-    font-size:40px;
+    font-size:35px;
     text-align: center;
     top: 0;
     width: 100%;
-    color: black;
+    color: white;
+    background-color: #333333;
 `;
-
 export const YoutubePage = styled.div`
     width: 100%;
     height: 100%;
     max-height: 90vh;
     position: relative;
-
     iframe {
         position: absolute;
         top: 0;
-        // left: 0;
         width: 100%;
         height: 100%;
       }
 `;
-
 export const YoutubeBox = styled.div`
     width: 100%;
     height: 100%;
