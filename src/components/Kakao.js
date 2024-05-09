@@ -3,6 +3,25 @@ import React, { useEffect } from 'react';
 import styled from 'styled-components';
 
 const KakaoMap = () => {
+    const theme = {
+        sizes: {
+          mobile: 360,
+          tablet: 768,
+          desktop: 1024,
+        },
+        media: {
+          mobile: (...args) => `@media (max-width: ${theme.sizes.mobile}px) {
+            ${args}
+          }`,
+          tablet: (...args) => `@media (min-width: ${theme.sizes.mobile + 1}px) and (max-width: ${theme.sizes.tablet}px) {
+            ${args}
+          }`,
+          desktop: (...args) => `@media (min-width: ${theme.sizes.tablet + 1}px) {
+            ${args}
+          }`,
+        },
+      };
+    
     const Kakao = styled.div`
         height: 100%;
         max-height: 800px;

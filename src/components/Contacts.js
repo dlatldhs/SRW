@@ -7,7 +7,7 @@ import Kakao from './Kakao';
 // 반응형 스타일을 위한 테마 설정
 const theme = {
   sizes: {
-    mobile: 480,
+    mobile: 360,
     tablet: 768,
     desktop: 1024,
   },
@@ -57,7 +57,7 @@ const MapInfoTitle = styled.h2`
   font-size: 1.5rem;
 
   ${theme.media.mobile`
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   `}
 `;
 
@@ -74,8 +74,8 @@ const CustomerConnect = styled.div`
   overflow-y: hidden;
 
   ${theme.media.mobile`
-    height: auto;
-    max-height: none;
+    height: 90vh;
+    max-height: 90vh;
   `}
 `;
 
@@ -99,9 +99,9 @@ const MapInfoContainer = styled.div`
   margin: 10% 10%;
 
   ${theme.media.mobile`
-    flex-direction: column;
     height: auto;
     margin: 0;
+    width: 80%;
   `}
 `;
 
@@ -115,7 +115,7 @@ const MapInfo = styled.div`
 
   ${theme.media.mobile`
     width: 100%;
-    height: auto;
+    height: 200px;
   `}
 `;
 
@@ -127,8 +127,8 @@ const KakaoContainer = styled.div`
   width: 70%;
 
   ${theme.media.mobile`
-    width: 100%;
-    height: auto;
+    width: 70%;
+    height: 200px;
   `}
 `;
 
@@ -145,7 +145,7 @@ const PictureInfo = styled.p`
   padding: 20px;
 
   ${theme.media.mobile`
-    font-size: 1rem;
+    font-size: 0.6rem;
   `}
 `;
 

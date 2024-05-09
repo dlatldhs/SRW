@@ -12,6 +12,7 @@ const Business = () => {
             <S.BusinessPage>
                 <S.Title>사업분야</S.Title>
                 <S.BusinessExplain>
+                    
                     <S.Picture>
                         <S.BusinessImage  src='/img/b_1.png' alt='사업분야' ></S.BusinessImage>
                         <S.PictureExplane>로봇용접 공정개발</S.PictureExplane>
