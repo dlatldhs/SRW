@@ -1,5 +1,25 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled,{css} from 'styled-components';
+
+// 반응형 스타일링을 위한 미디어 쿼리 설정
+const theme = {
+  sizes: {
+    mobile: 360,
+    tablet: 768,
+    desktop: 1024,
+  },
+  media: {
+    mobile: (...args) => `@media (max-width: ${theme.sizes.mobile}px) {
+      ${args}
+    }`,
+    tablet: (...args) => `@media (min-width: ${theme.sizes.mobile + 1}px) and (max-width: ${theme.sizes.tablet}px) {
+      ${args}
+    }`,
+    desktop: (...args) => `@media (min-width: ${theme.sizes.tablet + 1}px) {
+      ${args}
+    }`,
+  },
+};
 
 const StyledFooter = styled.footer`
   background-color: #333;
@@ -17,6 +37,14 @@ const FooterContent = styled.div`
   margin: 0 auto;
   align-items: center;
   font-size: 11px;
+
+  ${theme.media.mobile`
+    font-size: 8px;
+  `}
+
+  ${theme.media.tablet`
+    font-size: 10px;
+  `}
 `;
 
 const Footer = () => {

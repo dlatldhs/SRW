@@ -2,7 +2,7 @@ import styled, {css} from 'styled-components';
 
 const theme = {
     sizes: {
-      mobile: 480,
+      mobile: 360,
       tablet: 768,
       desktop: 1024,
     },
@@ -45,6 +45,14 @@ export const Title = styled.h2`
     width: 100%;
     color: white;
     background-color: #333333;
+
+    ${theme.media.mobile`
+      font-size: 18px;
+    `}
+
+    ${theme.media.tablet`
+      font-size: 25px;
+    `}
 `;
 export const BusinessExplain = styled.div`
     display: flex; 
@@ -53,12 +61,29 @@ export const BusinessExplain = styled.div`
     width: 100%;
     height: 100%;
     padding: 100px 100px;
+
+    ${theme.media.mobile`
+    padding: 5px 5px;
+    `}
+
+    ${theme.media.tablet`
+    padding: 5px 5px;
+    `}
 `;
 export const BusinessImage = styled.img`
     width: 100%;
     height: 100%;
     max-height: 400px;
-    
+
+    ${theme.media.mobile`
+      width: 72px;
+      height: 90px;
+    `}
+
+    ${theme.media.tablet`
+      width: 150px;
+      height: 180px;
+    `}
 `;
 export const BusinessBackground = styled.div`
     height: 100%;
@@ -67,16 +92,6 @@ export const BusinessBackground = styled.div`
     max-width: 100vw;
     background-color: white;
 `
-// export const BusinessPage = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     width: 100%;
-//     height: 90vh;
-//     max-width: 100vw;
-//     max-height:100vh;
-//     position: relative;
-// `
 
 export const BusinessPage = styled.div`
   display: flex;
@@ -122,6 +137,16 @@ export const PictureExplane = styled.p`
     position: absolute;
     bottom: 0;
     color: black;
+
+    ${theme.media.mobile`  
+      font-size: 9px;
+      max-height: 2px;
+    `}
+
+    ${theme.media.tablet`
+      font-size: 25px;
+      max-height: 20px;
+    `}
 `;
 export const ItemBox = styled.img`
     max-width: 300px;
@@ -129,10 +154,6 @@ export const ItemBox = styled.img`
     width: 100%;
     height: 100%;
 `;
-// export const ItemPage = styled.div`
-//     width: 100%;
-//     height: 90vh;
-// `;
 
 export const ItemPage = styled.div`
   width: 100%;
@@ -149,7 +170,6 @@ export const ItemPage = styled.div`
   `}
 `;
 
-
 export const ItemTitle = styled.h2`
     margin: 0 0 0 0;
     font-size:35px;
@@ -158,6 +178,14 @@ export const ItemTitle = styled.h2`
     width: 100%;
     color: white;
     background-color: #333333;
+
+    ${theme.media.mobile`
+    font-size: 18px;
+    `}
+
+    ${theme.media.tablet`
+      font-size: 25px;
+    `}
 `;
 export const YoutubePage = styled.div`
     width: 100%;
