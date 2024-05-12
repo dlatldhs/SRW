@@ -27,7 +27,7 @@ const Company = () => {
                             <S.CEOSign src='/img/sign.png' alt='CEO Sign'></S.CEOSign>
                         </S.CompanyIGBox1>
                         <S.CompanyIGBox2>
-                            <S.CEOP src="/img/image_5.png" alt="CEO"></S.CEOP>
+                            <S.CEOP src="/img/image_5.jpg" alt="CEO"></S.CEOP>
                         </S.CompanyIGBox2>
                     </S.CompanyIG>
                     <S.VisionBox>
